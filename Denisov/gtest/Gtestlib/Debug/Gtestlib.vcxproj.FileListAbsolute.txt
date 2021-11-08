@@ -1,0 +1,2 @@
+P:\c++\Учебная папка\Lab_3_Stack\Debug\Gtestlib.pdb
+P:\c++\Учебная папка\Lab_3_Stack\Gtestlib\Debug\Gtestlib.pdb
