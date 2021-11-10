@@ -1,5 +1,5 @@
 #include<gtest/gtest.h>
-#include<TStack.h>
+#include"..\Lab_3_Stack\TStack.h"
 
 TEST(TStack, can_create_Tstack)
 {

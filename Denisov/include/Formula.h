@@ -223,7 +223,7 @@ std::string Formula::FormulaConverter()
       c_op_breaket--;
     }
 
-    else if (LexDefForm[i].gettype() != 0, 4, -1)//is an operation
+    else if (LexDefForm[i].gettype() != 0 || LexDefForm[i].gettype()!=  4 || LexDefForm[i].gettype()!= -1)//is an operation
     {
       if (st.size() - c_op_breaket == 0)
         st.push(LexDefForm[i].getVal());
@@ -302,7 +302,7 @@ inline bool Formula::Calculate_Polish()
       }
       if (temp == "%")
       {
-        if (a == 0)
+        if (fabs(a) < 1e-10)
         {
           std::cout << "Error: division by zero\n";
           throw std::exception();

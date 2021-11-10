@@ -1,5 +1,5 @@
 #include<gtest/gtest.h>
-#include <Formula.h>
+#include "..\Lab_3_Stack\Formula.h"
 
 TEST(Formula, can_create_a_valid_formula)
 {

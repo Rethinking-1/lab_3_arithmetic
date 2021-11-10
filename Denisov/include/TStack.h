@@ -14,9 +14,9 @@ public:
   bool isEmpty();
   bool isFull();
   int size();
-  void push(T obj);
+  void push(const T& obj);
   void pop();
-  const T top();
+  T& top();
 };
 
 template<class T>
@@ -32,7 +32,8 @@ template<class T>
 inline TStack<T>::~TStack()
 {
   if (pMem != nullptr)
-    pMem = nullptr;
+    delete[]pMem;
+  pMem = nullptr;
 }
 
 template<class T>
@@ -54,7 +55,7 @@ inline int TStack<T>::size()
 }
 
 template<class T>
-inline void TStack<T>::push(const T obj)
+inline void TStack<T>::push(const T& obj)
 {
   if (isFull())
     throw std::exception();
@@ -73,7 +74,7 @@ inline void TStack<T>::pop()
 }
 
 template<class T>
-inline const T TStack<T>::top()
+inline T& TStack<T>::top()
 {
   if (isEmpty())
     throw std::exception();
